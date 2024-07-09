@@ -13,8 +13,10 @@ export default function Card(props: PropsWithChildren) {
 
 const style = StyleSheet.create({
   card: {
+    width: "94%",
     borderRadius: 8,
     paddingHorizontal: 20,
     paddingVertical: 14,
+    marginTop: 14,
   },
 });

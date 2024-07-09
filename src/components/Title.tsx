@@ -9,5 +9,6 @@ const style = StyleSheet.create({
   title: {
     fontSize: 32,
     fontFamily: 'Inter-Bold',
+    marginBottom: 14
   },
 });
