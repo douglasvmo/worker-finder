@@ -1,6 +1,6 @@
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
-import TabNavigation from "./src/navigation/TabNavigation";
+import StackNavigation from "./src/navigation/StackNavigation";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import "react-native-gesture-handler";
@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <TabNavigation />
+      <StackNavigation />
     </NavigationContainer>
   );
 }
