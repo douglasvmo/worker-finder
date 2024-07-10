@@ -15,6 +15,7 @@ export default function SecondRow() {
     <View style={style.row}>
       {categories.map((it) => (
         <CategoryButton
+          key={it.caption}
           title={it.caption}
           backgroundColor={it.backgroundColor}
           onPress={() => {}}
