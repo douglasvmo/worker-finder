@@ -17,7 +17,7 @@ export default function SearchInput({ placeholder }: TProps) {
     >
       <TextInput {...{ placeholder }} style={style.input} />
       <View style={style.iconWrapper}>
-        <Icon name="search" size={18} color="#fff" />
+        <Icon name="search" size={18} color="#fff"  />
       </View>
     </View>
   );
