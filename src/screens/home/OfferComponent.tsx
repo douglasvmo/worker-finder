@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import Card from "../../components/Card";
 import Title from "../../components/Title";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Button from "../../components/Button";
 
 const offer = [
   {
@@ -37,10 +37,7 @@ export default function OfferComponent() {
           >
             <Text style={style.caption}>{it.caption}</Text>
             <Title>{it.offer}</Title>
-            <TouchableOpacity style={style.offerBtn}>
-              <Text style={{ color: it.textColor }}>Grap Offer</Text>
-              <Icon name="chevron-right" color={it.textColor} />
-            </TouchableOpacity>
+            <Button title="Grap Offer" textColor={it.textColor} />
           </View>
         ))}
       </ScrollView>

@@ -13,6 +13,7 @@ import Air from "../../../assets/icons/air.svg";
 import Beauty from "../../../assets/icons/beauty.svg";
 import Appliance from "../../../assets/icons/appliance.svg";
 import Icon from "react-native-vector-icons/AntDesign";
+import CategoryButton from "../../components/CategoryButton";
 
 const categories = [
   {
@@ -43,55 +44,25 @@ export default function CategoriesComponent() {
     <Card>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {categories.map((it) => (
-          <TouchableOpacity
-            style={style.item}
-            key={it.caption}
+          <CategoryButton
+            title={it.caption}
             onPress={() => navigation.navigate(it.route as never)}
+            backgroundColor={it.backgroundColor}
+            borderColor={it.backgroundColor}
           >
-            <View
-              style={[
-                style.iconWeaper,
-                { backgroundColor: it.backgroundColor },
-              ]}
-            >
-              <it.Icon height={40} />
-            </View>
-            <Text>{it.caption}</Text>
-          </TouchableOpacity>
+            <it.Icon width={40} />
+          </CategoryButton>
         ))}
-        <TouchableOpacity
-          style={style.item}
+
+        <CategoryButton
+          title="See All"
           onPress={() => navigation.navigate(routes.CATEGORY as never)}
+          backgroundColor={colors.background}
+          borderColor={colors.border}
         >
-          <View
-            style={[
-              style.iconWeaper,
-              {
-                borderColor: colors.border,
-                backgroundColor: colors.background,
-              },
-            ]}
-          >
-            <Icon name="arrowright" size={32} />
-          </View>
-          <Text>See All</Text>
-        </TouchableOpacity>
+          <Icon name="arrowright" size={32} />
+        </CategoryButton>
       </ScrollView>
     </Card>
   );
 }
-
-const style = StyleSheet.create({
-  item: {
-    marginHorizontal: 10,
-  },
-
-  iconWeaper: {
-    height: 58,
-    width: 58,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 100,
-    marginBottom: 15,
-  },
-});
