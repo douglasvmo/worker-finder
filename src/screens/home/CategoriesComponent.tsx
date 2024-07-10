@@ -45,6 +45,7 @@ export default function CategoriesComponent() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {categories.map((it) => (
           <CategoryButton
+            key={it.caption}
             title={it.caption}
             onPress={() => navigation.navigate(it.route as never)}
             backgroundColor={it.backgroundColor}
