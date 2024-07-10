@@ -1,21 +1,23 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import Card from "../../components/Card";
-import Row from "../../components/Row";
+import Row from "../../components/SubTitleRow";
 import Button from "../../components/Button";
 import { useTheme } from "@react-navigation/native";
+import RowTag from "../../components/RowTag";
+import SubTitleRow from "../../components/SubTitleRow";
 
 export function CleaningComponent() {
   const { colors } = useTheme();
   return (
     <Card>
-      <Row>
-        <Text style={style.title}>Cleaning Services</Text>
+      <SubTitleRow title="Cleaning Services">
         <Button
           title="See All"
           textColor={colors.text}
           style={{ borderWidth: 1, borderColor: colors.border }}
         />
-      </Row>
+      </SubTitleRow>
+
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={style.stretchWrapper}>
           <Image
@@ -37,10 +39,6 @@ export function CleaningComponent() {
 }
 
 const style = StyleSheet.create({
-  title: {
-    fontFamily: "Inter-Bold",
-    fontSize: 18,
-  },
   stretchWrapper: {
     margin: 8,
   },
@@ -49,11 +47,11 @@ const style = StyleSheet.create({
     height: 155,
     resizeMode: "stretch",
     borderRadius: 10,
-    marginBottom: 8
+    marginBottom: 8,
   },
   taskText: {
     fontFamily: "Inter-Bold",
     fontSize: 14,
-    textAlign: "center"
+    textAlign: "center",
   },
 });

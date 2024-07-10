@@ -18,5 +18,6 @@ const style = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     marginTop: 14,
+    marginHorizontal: "auto"
   },
 });

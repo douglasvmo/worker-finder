@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 type Tprops = {
   onPress: () => void;
-  borderColor: string;
+  borderColor?: string;
   backgroundColor: string;
   title: string;
 };
