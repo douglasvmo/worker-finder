@@ -37,7 +37,11 @@ export default function OfferComponent() {
           >
             <Text style={style.caption}>{it.caption}</Text>
             <Title>{it.offer}</Title>
-            <Button title="Grap Offer" textColor={it.textColor} />
+            <Button
+              title="Grap Offer"
+              textColor={it.textColor}
+              style={{ backgroundColor: "#fff" }}
+            />
           </View>
         ))}
       </ScrollView>
