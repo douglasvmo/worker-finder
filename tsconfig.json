@@ -10,7 +10,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src", "__test__"
   ],
   "extends": "expo/tsconfig.base"
 }

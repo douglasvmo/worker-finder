@@ -11,11 +11,15 @@ type Tprops = {
   textColor: string;
   title: string;
   style?: StyleProp<ViewStyle>;
+  onPress: () => void;
 };
 
 export default function Button(props: Tprops) {
   return (
-    <TouchableOpacity style={[style.btnWrapper, props.style]}>
+    <TouchableOpacity
+      style={[style.btnWrapper, props.style]}
+      onPress={props.onPress}
+    >
       <Text style={{ color: props.textColor }}>{props.title}</Text>
       <Icon name="chevron-right" color={props.textColor} />
     </TouchableOpacity>

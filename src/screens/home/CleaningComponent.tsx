@@ -1,12 +1,12 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import Card from "../../components/Card";
-import Row from "../../components/SubTitleRow";
 import Button from "../../components/Button";
-import { useTheme } from "@react-navigation/native";
-import RowTag from "../../components/RowTag";
+import { useNavigation, useTheme } from "@react-navigation/native";
 import SubTitleRow from "../../components/SubTitleRow";
+import routes from "../../commun/routes";
 
 export function CleaningComponent() {
+  const navigation = useNavigation();
   const { colors } = useTheme();
   return (
     <Card>
@@ -15,6 +15,7 @@ export function CleaningComponent() {
           title="See All"
           textColor={colors.text}
           style={{ borderWidth: 1, borderColor: colors.border }}
+          onPress={() => navigation.navigate(routes.CATEGORY as never)}
         />
       </SubTitleRow>
 
