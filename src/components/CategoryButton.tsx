@@ -6,10 +6,12 @@ type Tprops = {
   borderColor?: string;
   backgroundColor: string;
   title: string;
+  titleColor?: string;
 };
 
 export default function CategoryButton({
   title,
+  titleColor,
   borderColor,
   backgroundColor,
   onPress,
@@ -28,7 +30,7 @@ export default function CategoryButton({
       >
         {children}
       </View>
-      <Text>{title}</Text>
+      <Text style={{ color: titleColor }}>{title}</Text>
     </TouchableOpacity>
   );
 }

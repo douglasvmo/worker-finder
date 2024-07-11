@@ -3,8 +3,6 @@ import { StyleSheet, View } from "react-native";
 import FirstRow from "./FirstRow";
 import SecondRow from "./SecondRow";
 import ThirdRow from "./ThirdRow";
-import Row from "../../components/SubTitleRow";
-import RowTag from "../../components/RowTag";
 import SubTitleRow from "../../components/SubTitleRow";
 
 export default function Category() {
@@ -13,9 +11,9 @@ export default function Category() {
     <View style={style.container}>
       <View style={[style.mainCard, { backgroundColor: colors.card }]}>
         <SubTitleRow title="All Categories" />
-        <FirstRow />
-        <SecondRow />
-        <ThirdRow />
+        <FirstRow textColor={colors.text} />
+        <SecondRow textColor={colors.text} />
+        <ThirdRow textColor={colors.text} />
       </View>
     </View>
   );
