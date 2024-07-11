@@ -25,14 +25,18 @@ export function CleaningComponent() {
             style={style.stretch}
             source={require("../../../assets/img/clean1.png")}
           />
-          <Text style={style.taskText}>Home Cleaning</Text>
+          <Text style={[style.taskText, { color: colors.text }]}>
+            Home Cleaning
+          </Text>
         </View>
         <View style={style.stretchWrapper}>
           <Image
             style={style.stretch}
             source={require("../../../assets/img/clean2.png")}
           />
-          <Text style={style.taskText}>Carpet Cleaning</Text>
+          <Text style={[style.taskText, { color: colors.text }]}>
+            Carpet Cleaning
+          </Text>
         </View>
       </ScrollView>
     </Card>

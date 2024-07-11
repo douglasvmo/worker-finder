@@ -2,10 +2,15 @@ import { useTheme } from "@react-navigation/native";
 import { PropsWithChildren } from "react";
 import { StyleSheet, Text } from "react-native";
 
-export default function Title(props: PropsWithChildren) {
-  const { colors } = useTheme();
+type TProps = {
+  textColor?: string;
+};
+
+export default function Title(props: PropsWithChildren<TProps>) {
   return (
-    <Text style={[style.title, { color: colors.text }]}>{props.children}</Text>
+    <Text style={[style.title, { color: props.textColor }]}>
+      {props.children}
+    </Text>
   );
 }
 
