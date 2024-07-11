@@ -1,6 +1,7 @@
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigation from "./src/navigation/StackNavigation";
+import useThemeState from "./src/hooks/useThemeState";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import "react-native-gesture-handler";
@@ -13,6 +14,8 @@ export default function App() {
     "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
   });
 
+  const theme = useThemeState();
+
   useEffect(() => {
     if (loaded || error) SplashScreen.hideAsync();
   }, [loaded, error]);
@@ -20,7 +23,7 @@ export default function App() {
   if (!loaded && !error) return null;
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <StackNavigation />
     </NavigationContainer>
   );
