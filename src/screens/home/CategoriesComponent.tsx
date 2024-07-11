@@ -47,6 +47,7 @@ export default function CategoriesComponent() {
           <CategoryButton
             key={it.caption}
             title={it.caption}
+            titleColor={colors.text}
             onPress={() => navigation.navigate(it.route as never)}
             backgroundColor={it.backgroundColor}
             borderColor={it.backgroundColor}
@@ -57,11 +58,12 @@ export default function CategoriesComponent() {
 
         <CategoryButton
           title="See All"
+          titleColor={colors.text}
           onPress={() => navigation.navigate(routes.CATEGORY as never)}
           backgroundColor={colors.background}
           borderColor={colors.border}
         >
-          <Icon name="arrowright" size={32} />
+          <Icon name="arrowright" size={32} color={colors.text} />
         </CategoryButton>
       </ScrollView>
     </Card>

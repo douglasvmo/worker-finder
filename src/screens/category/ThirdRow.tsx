@@ -10,13 +10,18 @@ export const categories = [
   { caption: "Men's Salon", Icon: MenSalom, backgroundColor: "#AFC6FF" },
 ];
 
-export default function ThirdRow() {
+type TProps = {
+  textColor?: string;
+};
+
+export default function ThirdRow({ textColor }: TProps) {
   return (
     <View style={style.row}>
       {categories.map((it) => (
         <CategoryButton
           key={it.caption}
           title={it.caption}
+          titleColor={textColor}
           backgroundColor={it.backgroundColor}
           onPress={() => {}}
         >
