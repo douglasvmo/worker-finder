@@ -3,6 +3,8 @@ import Beauty from "../../../assets/icons/beauty.svg";
 import Appliance from "../../../assets/icons/appliance.svg";
 import { View, StyleSheet } from "react-native";
 import CategoryButton from "../../components/CategoryButton";
+import { useNavigation } from "@react-navigation/native";
+import routes from "../../commun/routes";
 
 export const categories = [
   { caption: "AC Repair", Icon: Air, backgroundColor: "#FFBC99" },
@@ -15,6 +17,7 @@ type TProps = {
 };
 
 export default function FirstRow({ textColor }: TProps) {
+  const navigation = useNavigation();
   return (
     <View style={style.row}>
       {categories.map((it) => (
@@ -23,7 +26,7 @@ export default function FirstRow({ textColor }: TProps) {
           title={it.caption}
           titleColor={textColor}
           backgroundColor={it.backgroundColor}
-          onPress={() => {}}
+          onPress={() => navigation.navigate(routes.SERVICES as never)}
         >
           <it.Icon />
         </CategoryButton>

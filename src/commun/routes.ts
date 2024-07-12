@@ -1,5 +1,6 @@
 const HOME = "Home";
 const CATEGORY = "Category";
+const SERVICES = "Services";
 const DRAWER_HOME = "Drawer/Home";
 const TAB_HOME = "Tab/Home";
 const TAB_DOC = "Tab/Doc";
@@ -14,4 +15,5 @@ export default {
   TAB_MESSAGE,
   HOME,
   CATEGORY,
+  SERVICES,
 };
