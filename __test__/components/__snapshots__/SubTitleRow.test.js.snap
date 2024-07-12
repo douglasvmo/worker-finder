@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubTitle Component render 1`] = `
+<View
+  style={
+    {
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#CABDFF",
+        "borderRadius": 4,
+        "height": 20,
+        "margin": 4,
+        "width": 4,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "fontFamily": "Inter-Bold",
+        "fontSize": 18,
+      }
+    }
+  >
+    Cleaning Services
+  </Text>
+  <View
+    style={
+      {
+        "marginLeft": "auto",
+      }
+    }
+  />
+</View>
+`;
